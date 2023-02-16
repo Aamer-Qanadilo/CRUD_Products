@@ -1,5 +1,3 @@
-import specialProducts from "./data.js";
-
 // text fields
 
 var inputProductName = document.getElementById("inputProductName1");
@@ -70,14 +68,7 @@ window.onload = function () {
     updateLocalStorage();
     displayProducts();
   }
-  console.log(products);
-  console.log(specialProducts);
 
-  // products.forEach((item,index) => {
-  //     item = {...item, imageName:""};
-  //     products.splice(index, 1, item);
-  // });
-  // updateLocalStorage();
   checkAvailableProducts();
 };
 

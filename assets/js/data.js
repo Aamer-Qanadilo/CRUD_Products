@@ -1,4 +1,4 @@
-export default [
+const specialProducts = [
   {
     productID: "sp-0",
     productName: "Canon EOS 5D",
@@ -110,3 +110,10 @@ export default [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere sunt ratione voluptatem? Numquam dolorem distinctio nesciunt blanditiis tenetur, dolores enim, aspernatur rerum neque corrupti illo.",
   },
 ];
+
+window.onload = function () {
+  const products = localStorage.getItem("specialProducts");
+  if (products == null || !JSON.parse(products).length) {
+    localStorage.setItem("specialProducts", JSON.stringify(specialProducts));
+  }
+};
